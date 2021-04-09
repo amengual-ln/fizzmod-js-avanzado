@@ -2,7 +2,7 @@
 Realizar una función que reciba dos callbacks. El primer callback devuelve el array de objetos que se deben unir luego del tiempo en segundos que indica el retorno del segundo callback. La función devolverá una promesa. Se espera que dicha promesa, devuelva el resultado luego de la cantidad de segundos indicada. En caso de no recibirse un array, se devolverá este mensaje de error: 'Array de entrada no válido'. Si el callback no proporciona un tiempo válido, se devolverá 'Tiempo de entrada no válido' 
 */
 function objectMerge(array, tiempo) {
-  return 
+  return;
 }
 
 /*
@@ -14,7 +14,11 @@ newCounter(); // 1
 newCounter(); // 2
 */
 function contador() {
-  return
+  let counter = 0;
+  return function () {
+    counter += 1;
+    return counter;
+  };
 }
 
 /*
@@ -31,14 +35,11 @@ Nota: usá un objeto donde cada propiedad sea un argumento, y el valor el result
       usá hasOwnProperty!
 */
 function cacheFunction(cb) {
-  return
+  return;
 }
 
 module.exports = {
   objectMerge,
   contador,
-  cacheFunction
+  cacheFunction,
 };
-
-
-
