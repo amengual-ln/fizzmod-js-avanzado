@@ -4,7 +4,8 @@ Realizar una función que reciba dos callbacks. El primer callback devuelve el a
 const objectMerge = (array, tiempo) =>
   new Promise((resolve, reject) => {
     if (!Array.isArray(array())) reject("Array de entrada no válido");
-    if (typeof tiempo() !== "number" || tiempo() < 0) reject("Tiempo de entrada no válido");
+    if (typeof tiempo() !== "number" || tiempo() < 0)
+      reject("Tiempo de entrada no válido");
 
     setTimeout(() => resolve(Object.assign(...array())), tiempo() * 1000);
   });
@@ -20,7 +21,7 @@ newCounter(); // 2
 function contador() {
   let counter = 0;
   return function () {
-    counter += 1;
+    counter++;
     return counter;
   };
 }
