@@ -1,9 +1,13 @@
 /* 
 Realizar una función que reciba dos callbacks. El primer callback devuelve el array de objetos que se deben unir luego del tiempo en segundos que indica el retorno del segundo callback. La función devolverá una promesa. Se espera que dicha promesa, devuelva el resultado luego de la cantidad de segundos indicada. En caso de no recibirse un array, se devolverá este mensaje de error: 'Array de entrada no válido'. Si el callback no proporciona un tiempo válido, se devolverá 'Tiempo de entrada no válido' 
 */
-function objectMerge(array, tiempo) {
-  return;
-}
+const objectMerge = (array, tiempo) =>
+  new Promise((resolve, reject) => {
+    if (!Array.isArray(array())) reject("Array de entrada no válido");
+    if (typeof tiempo() !== "number" || tiempo() < 0) reject("Tiempo de entrada no válido");
+
+    setTimeout(() => resolve(Object.assign(...array())), tiempo() * 1000);
+  });
 
 /*
 La funcion contador debe retornar una funcion que cuando sea invocada retorne un valor creciente.
