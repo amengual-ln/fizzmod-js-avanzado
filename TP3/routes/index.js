@@ -2,7 +2,6 @@ import express from "express";
 
 const router = express.Router();
 
-import { promises } from "fs";
 import { saludo, random, info } from "../controller.js";
 
 // Ejercicio 1
