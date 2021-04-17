@@ -1,0 +1,18 @@
+{
+  "name": "tp3",
+  "version": "1.0.0",
+  "description": "Tercer tp del curso de NodeJs avanzado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amengual-ln/fizzmod-js-avanzado/tree/master/TP3"
+  },
+  "author": "Lautaro Amengual",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
