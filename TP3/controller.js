@@ -4,13 +4,11 @@ import { promises } from "fs";
 export const saludo = () => {
   const date = new Date();
   const hora = date.getHours();
-  if (hora >= 6 && hora <= 12) {
-    return "Buenos dias!";
-  } else if (hora >= 13 && hora <= 19) {
-    return "Buenas tardes!";
-  } else {
-    return "Buenas noches!";
-  }
+  
+  if (hora >= 6 && hora <= 12) return "Buenos dias!";
+  if (hora >= 13 && hora <= 19) return "Buenas tardes!";
+  return "Buenas noches!";
+
 };
 
 // Devuelve un objeto cuyas claves son numeros aleatorios del 1 al 20, y los valores son la cantidad de apariciones de esos numeros
