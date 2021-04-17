@@ -1,6 +1,7 @@
 {
   "name": "tp3",
   "version": "1.0.0",
+  "type": "module",
   "description": "Tercer tp del curso de NodeJs avanzado",
   "main": "index.js",
   "scripts": {
