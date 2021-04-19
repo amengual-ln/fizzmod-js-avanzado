@@ -2,7 +2,10 @@ import express from "express";
 
 const router = express.Router();
 
-import { saludo, random, info, operaciones } from "../controller.js";
+import { saludo } from "../controller/saludoController.js";
+import { random } from "../controller/randomController.js";
+import { info } from "../controller/infoController.js";
+import { operaciones } from "../controller/operacionesController.js";
 
 // Ejercicio 1
 router.get("/", (req, res) => {
