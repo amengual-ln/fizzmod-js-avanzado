@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-import { saludo, random, info } from "../controller.js";
+import { saludo, random, info, operaciones } from "../controller.js";
 
 // Ejercicio 1
 router.get("/", (req, res) => {
@@ -17,6 +17,13 @@ router.get("/random", (req, res) => {
 //  Ejercicio 3
 router.get("/info", async (req, res) => {
   res.send(await info());
+});
+
+router.get("/operaciones", async (req, res) => {
+  const num1 = req.query["num1"];
+  const num2 = req.query["num2"];
+  const operacion = req.query["operacion"];
+  res.send(operaciones(num1, num2, operacion));
 });
 
 // 404 para las rutas que no esten contempladas
