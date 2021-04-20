@@ -22,7 +22,7 @@ router.get("/info", async (req, res) => {
   res.send(await info());
 });
 
-router.get("/operaciones", async (req, res) => {
+router.get("/operaciones", (req, res) => {
   const num1 = req.query["num1"];
   const num2 = req.query["num2"];
   const operacion = req.query["operacion"];
