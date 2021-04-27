@@ -1,0 +1,20 @@
+extends ../layouts/mainLayout
+
+block content
+  .container.mt-5
+    h2 Nuevo producto
+    .card.card-body.mt-3.shadow
+      form(action="#" method="post")
+        div(class="mb-3")
+          label(for="nombre" class="form-label") Nombre
+          input(id="nombre" name="nombre" class="form-control")
+        div(class="mb-3")
+          label(for="precio" class="form-label") Precio
+          input(id="precio" name="precio" class="form-control")
+        div(class="mb-3")
+          label(for="descripcion" class="form-label") Descripción
+          input(id="descripcion" name="descripcion" class="form-control")
+        div(class="mb-3")
+          label(for="url-imagen" class="form-label") Url de la imagen
+          input(id="url-imagen" name="url-imagen" class="form-control")
+        button(type="submit" class="btn btn-primary") Enviar

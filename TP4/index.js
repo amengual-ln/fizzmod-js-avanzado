@@ -1,10 +1,10 @@
 import express from "express";
-import router from "./router/index.js";
+import router from "./src/router/index.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.set('views', './views')
+app.set('views', './src/views')
 app.set('view engine', 'pug')
 
 app.use(express.static('public'))
